@@ -1,5 +1,6 @@
 const isSymetric = require('../isSymmetric');
-const {assert,expect,should} = require('chai');
+const {assert,expect} = require('chai');
+require('chai').should();
 
 describe('Test isSymmetric functionallity', () => {
     it('Should pass when is symmetric array is provided', () => {
@@ -37,6 +38,14 @@ describe('Test isSymmetric functionallity', () => {
         let actionResult = isSymetric([]);
         
        expect(actionResult).to.be.true;
+
+        
+    });
+    it('Should pass', () => {
+        
+        let actionResult = isSymetric(['1',1]);
+        
+       actionResult.should.be.equal(false);
 
         
     });
